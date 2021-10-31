@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+    <bean id="f" class="com.wantoper.Fruit">
+        <property name="name" value="苹da果"></property>
+    </bean>
+
+    <bean id="student" class="com.wantoper.Student">
+        <property name="name" value="张三"></property>
+        <property name="fruit" ref="f"></property>
+        <property name="books">
+            <array>
+                <value>红楼梦</value>
+                <value>西游记</value>
+                <value>水浒传</value>
+                <value>三国演义</value>
+            </array>
+        </property>
+        <property name="hobbys">
+                <list>
+                    <value>唱</value>
+                    <value>跳</value>
+                    <value>rap</value>
+                    <value>篮球</value>
+                </list>
+        </property>
+        <property name="card">
+            <map>
+                <entry key="手机号" value="12345245612"></entry>
+                <entry key="身份证" value="123456454564231398"></entry>
+            </map>
+        </property>
+        <property name="games">
+            <set>
+                <value>lol</value>
+                <value>cf</value>
+                <value>王者荣耀</value>
+            </set>
+        </property>
+    </bean>
+
+
+
+
+</beans>

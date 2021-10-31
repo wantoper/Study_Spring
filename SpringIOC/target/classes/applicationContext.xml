@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:c="http://www.springframework.org/schema/c"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/c
+       http://www.springframework.org/schema/c.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+    <context:annotation-config></context:annotation-config>
+    <context:component-scan base-package="com.wantoper"></context:component-scan>
+
+    <import resource="Student.xml"></import>
+
+    <bean id="frt" class="com.wantoper.Fruit" p:name="苹果"></bean>
+    <bean id="f2" class="com.wantoper.Fruit" p:name="鸭梨"></bean>
+    <bean id="studentt" class="com.wantoper.Student" p:fruit-ref="f"></bean>
+
+</beans>
